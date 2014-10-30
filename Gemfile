@@ -12,6 +12,10 @@ group :development, :test do
   gem 'rspec-rails'
 end
 
+group :test do
+  gem 'simplecov', require: false
+end
+
 group :development do
   gem 'spring'
   gem 'better_errors'
