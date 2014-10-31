@@ -10,6 +10,7 @@ Factory.define :user do |f|
   f.birthday   Date.new(1982, 7, 30)
   f.club       Factory(:club)
   f.password   "password"
+  f.password_confirmation "password"
 end
 
 Factory.define :member, parent: :user do |f|

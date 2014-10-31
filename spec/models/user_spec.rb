@@ -4,6 +4,9 @@ RSpec.describe User, :type => :model do
   it { is_expected.not_to accept_values_for :email, "" }
   it { is_expected.to accept_values_for :email, "email@email.com" }
 
+  it { is_expected.not_to accept_values_for :password, "" }
+  it { is_expected.to accept_values_for :password, "password" }
+
   it "has a full name" do
     user = Factory.build(:user, first_name: "John", last_name: "Doe")
 
@@ -36,6 +39,5 @@ RSpec.describe User, :type => :model do
     expect(user.authenticate('wrong')).to eq false
     expect(user.authenticate('password')).to eq user
   end
-
 
 end
