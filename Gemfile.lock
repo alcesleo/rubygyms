@@ -31,11 +31,14 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
     arel (5.0.1.20140414130214)
+    bcrypt (3.1.9)
     better_errors (1.1.0)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
+    bootstrap-sass (3.1.1.1)
+      sass (~> 3.2)
     builder (3.2.2)
     coderay (1.1.0)
     debug_inspector (0.0.2)
@@ -102,7 +105,7 @@ GEM
       sass (~> 3.2.2)
       sprockets (~> 2.8, < 2.12)
       sprockets-rails (~> 2.0)
-    simple_form (3.0.2)
+    simple_form (3.1.0.rc2)
       actionpack (~> 4.0)
       activemodel (~> 4.0)
     simplecov (0.9.0)
@@ -132,15 +135,17 @@ PLATFORMS
 
 DEPENDENCIES
   accept_values_for
+  bcrypt (~> 3.1.7)
   better_errors
   binding_of_caller
+  bootstrap-sass (~> 3.1.1.0)
   did_you_mean
   minifacture
   quiet_assets
   rails (= 4.1.6)
   rspec-rails
   sass-rails (~> 4.0.3)
-  simple_form
+  simple_form (= 3.1.0.rc2)
   simplecov
   spring
   sqlite3

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141031100126) do
+ActiveRecord::Schema.define(version: 20141031125936) do
 
   create_table "clubs", force: true do |t|
     t.string   "title"
@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 20141031100126) do
     t.integer  "club_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "password_digest"
   end
 
   add_index "users", ["club_id"], name: "index_users_on_club_id"

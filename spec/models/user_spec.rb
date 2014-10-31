@@ -21,5 +21,11 @@ RSpec.describe User, :type => :model do
     expect(user).not_to be_owner
   end
 
+  it "can be authenticated" do
+    user = Factory.create(:user, password: 'password')
+    expect(user.authenticate('wrong')).to eq false
+    expect(user.authenticate('password')).to eq true
+  end
+
 
 end
