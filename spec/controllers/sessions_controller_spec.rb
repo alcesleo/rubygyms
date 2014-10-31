@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe LoginController, :type => :controller do
+RSpec.describe SessionsController, :type => :controller do
 
   describe "GET new" do
     it "assigns an empty user" do

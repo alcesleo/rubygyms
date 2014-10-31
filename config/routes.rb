@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
-  root 'login#new'
-  resources :login
+  root 'sessions#new'
+  resources :sessions
 end
