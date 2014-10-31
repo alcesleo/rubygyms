@@ -4,6 +4,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.1.6'
 gem 'sqlite3'
 gem 'sass-rails', '~> 4.0.3'
+gem 'simple_form'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
