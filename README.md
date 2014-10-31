@@ -21,6 +21,11 @@ easy to change.
 It's a simple boolean field, this obviously won't scale if you have more
 roles, but YAGNI.
 
+### Email validation
+
+There is none, it's almost impossible to do this completely right, so
+it is recommended to just send a confirmation email to verify.
+
 ### Testing
 
 RSpec because it's well known and the industry standard.
@@ -28,3 +33,10 @@ RSpec because it's well known and the industry standard.
 I wrote tests where it made sense to test-drive the implementation, if you have
 a bigger system or need more confidence you could spend more time on covering
 everything, but in this small app I thought that would be a waste of time.
+
+## TODO
+
+Things I haven't done yet:
+
+* Unique emails for users
+* Confirmation emails
