@@ -23,7 +23,7 @@ RSpec.describe SessionsController, :type => :controller do
 
       post :create, user: { email: 'test@email.com', password: 'wrong' }
 
-      expect(response).to render_template(:new)
+      expect(response).to redirect_to new_session_path
     end
   end
 
