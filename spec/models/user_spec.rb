@@ -24,6 +24,12 @@ RSpec.describe User, :type => :model do
     expect(user).not_to be_owner
   end
 
+  it "sets the owner-field to false by default" do
+    user = Factory(:user)
+
+    expect(user.owner).to eq false
+  end
+
   it "can be authenticated" do
     user = Factory.create(:user, password: 'password')
 
