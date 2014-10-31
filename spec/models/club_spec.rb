@@ -1,5 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe Club, :type => :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it { is_expected.not_to accept_values_for :title, "" }
+  it { is_expected.to accept_values_for :title, "My club" }
 end

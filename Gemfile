@@ -14,6 +14,7 @@ end
 
 group :test do
   gem 'simplecov', require: false
+  gem 'accept_values_for'
 end
 
 group :development do
