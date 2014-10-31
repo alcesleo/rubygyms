@@ -15,6 +15,7 @@ end
 group :test do
   gem 'simplecov', require: false
   gem 'accept_values_for'
+  gem 'minifacture'
 end
 
 group :development do
