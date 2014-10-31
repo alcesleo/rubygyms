@@ -11,11 +11,12 @@ RSpec.describe SessionsController, :type => :controller do
 
   describe "POST create" do
     it "logs a user in" do
-      Factory(:user, email: 'test@email.com', password: 'password')
+      user = Factory(:user, email: 'test@email.com', password: 'password')
 
       post :create, user: { email: 'test@email.com', password: 'password' }
 
       expect(response).to redirect_to(root_path)
+      expect(session[:user_id]).to eq user.id
     end
 
     it "re-renders the template if the credentials are wrong" do
@@ -24,6 +25,22 @@ RSpec.describe SessionsController, :type => :controller do
       post :create, user: { email: 'test@email.com', password: 'wrong' }
 
       expect(response).to redirect_to new_session_path
+    end
+  end
+
+  describe "GET log_out" do
+
+    def fake_login(user)
+      session[:user_id] = user.id
+    end
+
+    it "logs the user out" do
+      fake_login Factory(:user)
+
+      get :log_out
+      
+      expect(session[:user_id]).to be_nil
+      expect(response).to redirect_to root_url
     end
   end
 
