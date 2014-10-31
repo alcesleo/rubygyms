@@ -7,6 +7,13 @@
 </head>
 <body>
   <div class="container master-container">
+    <% if current_user %>
+      Logged in as <%= current_user.email %>
+      <%= link_to "Log out", log_out_path %>
+    <% else %>
+        <%= link_to "Log in", log_in_path %> or
+        <%= link_to "Sign up", new_user_path %>
+    <% end %>
     <h1>Rubygyms</h1>
 
     <% flash.each do |type, message| %>
