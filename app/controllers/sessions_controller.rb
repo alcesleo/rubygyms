@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
   end
 
   # TODO: Refactor
-  def create
+  def log_in
     email, password = params[:user].values_at(:email, :password)
     user = User.authenticate(email, password)
 
@@ -14,7 +14,7 @@ class SessionsController < ApplicationController
       redirect_to root_path, :notice => "Welcome, #{user.email}"
     else
       flash.now.alert = "Invalid email or password"
-      redirect_to new_session_path
+      redirect_to log_in_path
     end
   end
 
