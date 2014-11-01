@@ -46,3 +46,4 @@ Things I haven't done yet:
 * Update password
 * Better safety between roles
 * Pagination and query optimization
+* Check so you can't kick members from other clubs

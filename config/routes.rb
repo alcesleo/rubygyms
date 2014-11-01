@@ -8,4 +8,7 @@ Rails.application.routes.draw do
   # TODO: specify the routes so we don't have the unnecessary ones
   resources :users
   resources :clubs
+
+  # TODO: I think there is a better way of doing this
+  get "/clubs/:id/kick/:member_id" => "clubs#kick", as: "kick_member"
 end

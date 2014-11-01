@@ -4,6 +4,6 @@
 
 <ul>
 <% @club.members.each do |member| %>
-  <li><%= member.email %></li>
+  <li><%= member.email %> | <%= link_to "kick", kick_member_path(@club.id, member.id) %></li>
 <% end %>
 </ul>

@@ -22,6 +22,15 @@ class ClubsController < ApplicationController
     @club = Club.find(params[:id])
   end
 
+  def kick
+    # TODO: This needs to check if the member belongs to that club
+
+    user = User.find(params[:member_id])
+    user.club_id = nil
+    user.save!
+    redirect_to club_path(params[:id]), notice: "Member kicked"
+  end
+
 private
 
   def club_params
