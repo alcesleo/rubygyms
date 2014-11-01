@@ -14,7 +14,10 @@ rake
 ### Database
 
 SQLite; because it's portable and easy, no need for more at this point and it's
-easy to change.
+easy to change. I used this diagram as a sketch, it's not strictly a database
+diagram but I think it shows my intentions.
+
+![](diagram.jpg)
 
 ### User roles
 
