@@ -39,7 +39,7 @@ everything, but in this small app I thought that would be a waste of time.
 
 ## TODO
 
-Things I haven't done yet:
+Things I haven't had time for yet:
 
 * Unique emails for users
 * Confirmation emails
@@ -47,3 +47,4 @@ Things I haven't done yet:
 * Better safety between roles
 * Pagination and query optimization
 * Check so you can't kick members from other clubs
+* Get better test coverage
