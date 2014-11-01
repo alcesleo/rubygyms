@@ -24,7 +24,7 @@ RSpec.describe SessionsController, :type => :controller do
 
       post :log_in, user: { email: 'test@email.com', password: 'wrong' }
 
-      expect(response).to redirect_to log_in_path
+      expect(response).to render_template :new
     end
   end
 

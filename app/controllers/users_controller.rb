@@ -15,12 +15,15 @@ class UsersController < ApplicationController
   end
 
   def update
-    user = User.find(params[:id])
-    user.update!(user_params)
-    redirect_to root_path, notice: "Updated information"
+    @user = User.find(params[:id])
+    @user.update(user_params)
+    flash.now.notice = "Updated information"
+    render :edit
   end
 
 private
+
+  # TODO: make a separate update_user_params
 
   def user_params
     params.require(:user).permit(

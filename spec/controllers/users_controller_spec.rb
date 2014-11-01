@@ -38,7 +38,7 @@ RSpec.describe UsersController, :type => :controller do
 
       user.reload
       expect(user.first_name).to eq 'Emma'
-      expect(response).to redirect_to(root_path)
+      expect(response).to render_template(:edit)
     end
 
     it "updates the associated club for members"
