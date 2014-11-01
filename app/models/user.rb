@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
   belongs_to :club
+  has_and_belongs_to_many :workouts
   validates_presence_of :email
 
   has_secure_password
