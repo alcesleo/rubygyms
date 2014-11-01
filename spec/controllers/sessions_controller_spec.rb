@@ -30,12 +30,8 @@ RSpec.describe SessionsController, :type => :controller do
 
   describe "GET log_out" do
 
-    def fake_login(user)
-      session[:user_id] = user.id
-    end
-
     it "logs the user out" do
-      fake_login Factory(:user)
+      login(Factory(:user))
 
       get :log_out
 

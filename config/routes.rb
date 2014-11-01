@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'clubs/new'
+
+  get 'clubs/index'
+
+  get 'clubs/show'
+
   root 'sessions#index'
 
   get "log_in" => "sessions#new"
