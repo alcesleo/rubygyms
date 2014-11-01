@@ -3,10 +3,6 @@ class User < ActiveRecord::Base
   validates_presence_of :email
 
   has_secure_password
-  # I think has_secure password already does this, but this was the easiest way
-  # to get SimpleForm to understand it.
-  validates_presence_of :password
-  validates_presence_of :password_confirmation, on: :create
 
   def self.authenticate(email, password)
     user = find_by(email: email)

@@ -6,7 +6,7 @@
   <%= f.input :email %>
   <%= f.input :birthday %>
   <%= f.input :owner %>
-  <%= f.input :password %>
-  <%= f.input :password_confirmation %>
+  <%= f.input :password, required: true %>
+  <%= f.input :password_confirmation, required: true %>
   <%= f.submit 'Create account' %>
 <% end %>

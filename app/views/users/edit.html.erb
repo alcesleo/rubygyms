@@ -1,9 +1,13 @@
 <h2>Update account</h2>
 
+  <%= @user.club_id %>
 <%= simple_form_for @user do |f| %>
   <%= f.input :first_name %>
   <%= f.input :last_name %>
   <%= f.input :email %>
   <%= f.input :birthday %>
+  <% if current_user.member? %>
+      <%= f.association :club %>
+  <% end %>
   <%= f.submit 'Update' %>
 <% end %>

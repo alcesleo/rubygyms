@@ -40,3 +40,5 @@ Things I haven't done yet:
 
 * Unique emails for users
 * Confirmation emails
+* Update password
+* Better safety between roles

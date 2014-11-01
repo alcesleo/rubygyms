@@ -16,7 +16,7 @@ class UsersController < ApplicationController
 
   def update
     user = User.find(params[:id])
-    user.update_columns(user_params)
+    user.update!(user_params)
     redirect_to root_path, notice: "Updated information"
   end
 
@@ -28,6 +28,7 @@ private
       :last_name,
       :email,
       :owner,
+      :club_id,
       :password,
       :password_confirmation,
     )

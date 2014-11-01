@@ -40,6 +40,8 @@ RSpec.describe UsersController, :type => :controller do
       expect(user.first_name).to eq 'Emma'
       expect(response).to redirect_to(root_path)
     end
+
+    it "updates the associated club for members"
   end
 
 end

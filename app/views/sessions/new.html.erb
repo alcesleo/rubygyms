@@ -2,6 +2,6 @@
 
 <%= simple_form_for @user, url: log_in_path, method: :post do |f| %>
   <%= f.input :email %>
-  <%= f.input :password %>
+  <%= f.input :password, required: true %>
   <%= f.submit 'Log in' %>
 <% end %>
