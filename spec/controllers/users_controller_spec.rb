@@ -31,4 +31,15 @@ RSpec.describe UsersController, :type => :controller do
     end
   end
 
+  describe "POST update" do
+    it "updates a user" do
+      user = Factory(:user, first_name: 'Sarah')
+      put :update, id: user.id, user: { first_name: 'Emma' }
+
+      user.reload
+      expect(user.first_name).to eq 'Emma'
+      expect(response).to redirect_to(root_path)
+    end
+  end
+
 end

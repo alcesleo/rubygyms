@@ -1,0 +1,9 @@
+<h2>Update account</h2>
+
+<%= simple_form_for @user do |f| %>
+  <%= f.input :first_name %>
+  <%= f.input :last_name %>
+  <%= f.input :email %>
+  <%= f.input :birthday %>
+  <%= f.submit 'Update' %>
+<% end %>

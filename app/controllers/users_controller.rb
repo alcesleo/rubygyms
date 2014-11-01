@@ -10,6 +10,16 @@ class UsersController < ApplicationController
     render :new
   end
 
+  def edit
+    @user = User.find(params[:id])
+  end
+
+  def update
+    user = User.find(params[:id])
+    user.update_columns(user_params)
+    redirect_to root_path, notice: "Updated information"
+  end
+
 private
 
   def user_params
