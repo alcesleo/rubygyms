@@ -1,13 +1,16 @@
 class UsersController < ApplicationController
   def new
+    # TODO: DRY up the uses of this in following methods
     @user = User.new
   end
 
   def create
-    User.create!(user_params)
-    redirect_to root_path
-  rescue ActiveRecord::RecordInvalid
-    render :new
+    @user = User.new(user_params)
+    if @user.save
+      redirect_to root_path, notice: 'Created user'
+    else
+      render :new
+    end
   end
 
   def edit
