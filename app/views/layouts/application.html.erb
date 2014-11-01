@@ -17,6 +17,13 @@
           <li><p class="navbar-text">Logged in as <%= current_user.email %></p></li>
           <li><%= link_to "Log out", log_out_path %></li>
           <li><%= link_to "Update information", edit_user_path(current_user.id) %></li>
+          <% if current_user.owner? %>
+            <% if current_user.club %>
+              <li><%= link_to "My club", club_path(current_user.club_id) %></li>
+            <% else %>
+              <li><%= link_to "Register club", new_club_path %></li>
+            <% end %>
+          <% end %>
         <% else %>
           <li><%= link_to "Log in", log_in_path %></li>
           <li><%= link_to "Sign up", new_user_path %></li>

@@ -1,16 +1,11 @@
 Rails.application.routes.draw do
-  get 'clubs/new'
-
-  get 'clubs/index'
-
-  get 'clubs/show'
-
   root 'sessions#index'
 
-  get "log_in" => "sessions#new"
-  post "log_in" => "sessions#log_in"
-  get "log_out" => "sessions#log_out"
+  get  "log_in"  => "sessions#new"
+  post "log_in"  => "sessions#log_in"
+  get  "log_out" => "sessions#log_out"
 
   # TODO: specify the routes so we don't have the unnecessary ones
   resources :users
+  resources :clubs
 end
