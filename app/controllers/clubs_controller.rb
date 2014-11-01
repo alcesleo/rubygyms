@@ -18,9 +18,6 @@ class ClubsController < ApplicationController
     end
   end
 
-  def index
-  end
-
   def show
   end
 
@@ -37,6 +34,6 @@ private
   end
 
   def authorize_correct_owner!
-    redirect_to root_url unless current_user.id == params[:id]
+    redirect_to root_url unless current_user.club_id == params[:id].to_i
   end
 end

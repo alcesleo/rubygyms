@@ -27,6 +27,17 @@ RSpec.describe ClubsController, :type => :controller do
 
       expect(response).to redirect_to(root_url)
     end
+
+    it "shows the page if you're the owner of that club" do
+      club  = Factory(:club)
+      owner = Factory(:owner, club: club)
+
+      login(owner)
+
+      get :show, id: club.id
+
+      expect(response).to render_template(:show)
+    end
   end
 
   describe "POST create" do
