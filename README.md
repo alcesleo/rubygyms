@@ -41,10 +41,11 @@ everything, but in this small app I thought that would be a waste of time.
 
 Things I haven't had time for yet:
 
+* Implement the Workouts use case
+* Check so you can't kick members from other clubs
+* Better safety boundaries between roles
+* Pagination and query optimization
+* Get better test coverage
 * Unique emails for users
 * Confirmation emails
 * Update password
-* Better safety between roles
-* Pagination and query optimization
-* Check so you can't kick members from other clubs
-* Get better test coverage
