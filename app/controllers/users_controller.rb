@@ -1,6 +1,5 @@
 class UsersController < ApplicationController
   def new
-    # TODO: DRY up the uses of this in following methods
     @user = User.new
   end
 
