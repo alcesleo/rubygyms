@@ -45,3 +45,4 @@ Things I haven't done yet:
 * Confirmation emails
 * Update password
 * Better safety between roles
+* Pagination and query optimization

@@ -1,2 +1,9 @@
-<h1>Clubs#show</h1>
-<p>Find me in app/views/clubs/show.html.erb</p>
+<h2><%= @club.name %></h2>
+
+<h3>Members</h3>
+
+<ul>
+<% @club.members.each do |member| %>
+  <li><%= member.email %></li>
+<% end %>
+</ul>
