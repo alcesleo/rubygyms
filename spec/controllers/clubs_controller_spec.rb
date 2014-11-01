@@ -60,11 +60,13 @@ RSpec.describe ClubsController, :type => :controller do
 
   describe "GET kick" do
     it "kicks a member" do
-      owner = Factory(:owner)
-      club = owner.club
+      club  = Factory(:club)
+      owner = Factory(:owner, club: club)
       member = Factory(:member, club: club)
 
-      get :kick, id: club.id, member_id: member.id
+      login(owner)
+
+      get :kick, { id: club.id, member_id: member.id }
 
       member.reload
       expect(member.club).to be_nil
