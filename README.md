@@ -48,3 +48,4 @@ Things I haven't had time for yet:
 * Unique emails for users
 * Confirmation emails
 * Update password
+* General refactorings
